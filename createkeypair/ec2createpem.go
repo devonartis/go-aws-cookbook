@@ -29,8 +29,8 @@ func savePem(f string, k string) error {
 
 func main() {
 	//pairname := flag.String("Keyname", "~/.ssh/", "Enter the name of the")
-	pairname = "TestkeyGo4"
-	svc = ec2.New(session.New(&aws.Config{Region: aws.String("us-east-1")}))
+	pairname = "testWB"
+	svc = ec2.New(session.New(&aws.Config{Region: aws.String("us-west-1")}))
 
 	keyresult, err := svc.CreateKeyPair(&ec2.CreateKeyPairInput{
 		KeyName: aws.String(pairname),
